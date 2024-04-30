@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+}
+
+html {
+    background-color: gray
+}
+
+.headerImg {
+    position: relative;
+    text-align: center;
+}
+
+.headerImg h1 {
+    color: white;
+    position: absolute;
+    font-size: 5vw;
+    top: 20px;
+    left: 50%;
+    margin: 0;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+
+.headerImg img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+div.piano {
+    background-color: white;
+    margin: 10px;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.piano_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yamaha {
+    font-size: 4vw;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: black;
+    -webkit-text-stroke: 0.8px white;
+    margin: 0;
+    margin-left: 40vw;
+}
+
+.fa-circle-question {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 5.5vw;
+    margin-left: 30vw;
+    margin-bottom: 10px;
+    color: rgb(25, 49, 79);
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 20vw;
+    background-color: rgb(56, 56, 56, 0.9);
+    color: #000000;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    right: 120%;
+    margin-left: -10vw;
+    font-size: 1.5vw;
+    font-family: monospace;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltip-text::after {
+    content: " ";
+    position: absolute;
+    top: 3%;
+    left: 103.9%;
+    margin-left: -4%;
+    border-width: 1vw;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(56, 56, 56, 0.9);
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.detune {
+    color: black;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    height: 6vw;
+    width: 18vw;
+}
+
+.detune p {
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 1vw;
+}
+
+.piano_white_keys {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(auto, 1fr));
+    grid-template-rows: repeat(1, minmax(auto, calc(200vw / 8)));
+    color: #000000;
+}
+
+.piano_white_keys div {
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px black;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+}
+
+.piano_black_keys {
+    margin-left: 80px;
+    margin-right: 80px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(auto, 1fr));
+    grid-template-rows: repeat(1, calc(130vw / 6));
+}
+
+.piano_black_keys div {
+    border: 2px solid white;
+    box-shadow: 3px 3px 3px black;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.beat {
+    margin-left: 20px;
+}
+
+.piano_black_keys .display_none {
+    border: none;
+    background-color: white;
+    z-index: -100;
+}
+
+.piano_white_keys .pressedWhite {
+    background-color: lightgray;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.piano_black_keys .pressedBlack {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.synth {
+    display: flex;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12.4vw;
+    height: 12.4vw;
+    background-color: #000000;
+    border-radius: 5px;
+}
+
+.membrane {
+    width: 12.2vw;
+    height: 12.2vw;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #c7c3c0;
+    box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px,
+      #ffffff 1.5px 1.5px 2px 0px inset, #c7c3c0 -3.2px -3.2px 8px 0px inset;
+    cursor: pointer;
+    font-family: Montserrat;
+    transition: 0.1s ease-in-out;
+}
+
+.membrane:active {
+    box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px, inset 0.5px 0.5px 4px #000000,
+      #c7c3c0 -3.2px -3.2px 8px 0px inset;
+}
+
+.polysynth {
+    width: 12.2vw;
+    height: 12.2vw;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #c7c3c0;
+    box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px,
+      #ffffff 1.5px 1.5px 2px 0px inset, #c7c3c0 -3.2px -3.2px 8px 0px inset;
+    cursor: pointer;
+    font-family: Montserrat;
+    transition: 0.1s ease-in-out;
+}
+
+.polysynth:active {
+    box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px, inset 0.5px 0.5px 4px #000000,
+      #c7c3c0 -3.2px -3.2px 8px 0px inset;
+}
+
+.file-upload {
+    display: none;
+}
+
+.sampler {
+    width: 12.2vw;
+    height: 12.2vw;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #c7c3c0;
+    box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px,
+      #ffffff 1.5px 1.5px 2px 0px inset, #c7c3c0 -3.2px -3.2px 8px 0px inset;
+    cursor: pointer;
+    font-family: Montserrat;
+    color: black;
+    transition: 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sampler:active {
+    box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px, inset 0.5px 0.5px 4px #000000,
+      #c7c3c0 -3.2px -3.2px 8px 0px inset;
+}
+
+
+/* piano */
+.piano {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.piano:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-piano 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-piano {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.piano:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #545251;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+

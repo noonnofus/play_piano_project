@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano - play on the browser</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
+    <script type="module" src="./frontend.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="headerImg">
+            <h1>Play piano with your keyboard</h1>
+            <img src="/image/header.jpg" alt="header img">
+        </div>
+    </header>
+    <footer>
+        <div class="piano">
+            <div class="piano_header">
+                <p class="yamaha">Yamaha</p>
+                <i class="fa-solid fa-circle-question tooltip">
+                    <p class="tooltip-text">
+                        <em>Piano</em>
+                        <br>
+                        a: C4
+                        w: Db4
+                        s: D4
+                        e: Eb4
+                        d: E4
+                        f: F4
+                        t: Gb4
+                        g: G4
+                        y: Ab4
+                        h: A4
+                        u: Bb4
+                        j: B4
+                        k: C5
+                        <br>
+                        <br>
+                        <em>Detune</em>
+                        <br>
+                        -, +: control detune (Only when you use Piano and Membrane synth)
+                        <br>
+                        <br>
+                        you can play different synths with the "Piano", and "Membrane" buttons and also play piano with your voice by uploading your voice mp3 file by clicking the "Sample" button.
+                    </p>
+                </i>
+            </div>
+            <div class="container">
+                <div class="synth">
+                    <div class="btn">
+                        <button class="polysynth">Piano</button>
+                    </div>
+                    <div class="btn">
+                        <button class="membrane">Membrane</button>
+                    </div>
+                    <div class="btn">
+                        <label for="file-upload" class="sampler">Sample</label>
+                        <form id="sampling">
+                            <input type="file" class="file-upload">
+                        </form>
+                    </div>
+                </div>
+                <div class="detune">
+                    <p>detune: 0</p>
+                </div>
+            </div>
+            <div class="piano_black_keys">
+                <div class="w">w</div>
+                <div class="e">e</div>
+                <div class="display_none"></div>
+                <div class="t">t</div>
+                <div class="y">y</div>
+                <div class="u">u</div>
+            </div>
+            <div class="piano_white_keys">
+                <div class="a">a</div>
+                <div class="s">s</div>
+                <div class="d">d</div>
+                <div class="f">f</div>
+                <div class="g">g</div>
+                <div class="h">h</div>
+                <div class="j">j</div>
+                <div class="k">k</div>
+            </div>
+        </div>
+
+        <!-- <div class="paper">
+            <div class="holes"></div>
+            <div class="write">
+                Piano
+                
+                a: C4
+                w: Db4
+                s: D4
+                e: Eb4
+                d: E4
+                f: F4
+                t: Gb4
+                g: G4
+                y: Ab4
+                h: A4
+                u: Bb4
+                j: B4
+                k: C5
+
+                Detune
+                -, +: control detune
+
+                you can also use different synth with "piano", "membrane" buttons and also play with any voice with "Sample" button.
+            </div>
+            </div>
+        </div> -->
+    </footer>
+</body>
+</html>

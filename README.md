@@ -27,7 +27,7 @@ I built WebPiano using **JavaScript, EJS templates, CSS3**, and **Tone.js** for 
 - Improve layout and key mapping feedback animation  
 
 ## 📸 Screenshots  
-![WebPiano Desktop](./public/images/webpiano-overview.png)
+![WebPiano Desktop](./public/image/webpiano-overview.png)
 
 ## 🛠️ Tech Stack  
 - **Frontend:** CSS3, JavaScript (Vanilla)  
